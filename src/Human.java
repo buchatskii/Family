@@ -17,14 +17,7 @@ public class Human implements Serializable, Comparable<Human> {
     private Human father;
     private final List<Human> childrens;
 
-    /**
-     * @param firstName   Имя
-     * @param lastname    Фамилия
-     * @param dateOfBirth дата рождения (Формат записи "ГГГГ-ММ-ДД")
-     * @param sex         пол(male or female)
-     * @param mather      ссылка на объект мать Human(sex female)
-     * @param father      ссылка на объект отец Human(sex male)
-     */
+    
     public Human(int id, String firstName, String lastname, LocalDate dateOfBirth, Sex sex, Human mather, Human father) {
         this.id = id;
         this.firstName = firstName;
@@ -95,9 +88,7 @@ public class Human implements Serializable, Comparable<Human> {
         this.father = father;
     }
 
-    /**
-     * Добавить ребенка в лист детей у человека
-     */
+    
     public void addChildren(Human human) {
 
         if (!childrens.contains(human)) {
